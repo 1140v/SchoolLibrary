@@ -1,0 +1,370 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/gray_100"
+    tools:context=".activity.AdminActivity">
+
+    <!-- 顶部标题栏 -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:padding="16dp"
+        android:background="@color/white">
+
+        <ImageView
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:src="@drawable/ic_person"
+            app:tint="@color/primary_blue"
+            android:contentDescription="管理员图标" />
+
+        <!-- 欢迎文本 -->
+        <TextView
+            android:id="@+id/welcomeText"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="end"
+            android:text="欢迎，管理员"
+            android:textColor="@color/gray_600"
+            android:textSize="14sp" />
+    </LinearLayout>
+
+    <!-- 内容区域 -->
+    <FrameLayout
+        android:id="@+id/adminContentFrame"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:padding="16dp">
+
+        <!-- 默认显示用户管理界面 -->
+        <LinearLayout
+            android:id="@+id/userManagementLayout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:visibility="visible">
+
+            <!-- 用户管理卡片 -->
+            <com.google.android.material.card.MaterialCardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="16dp"
+                app:cardCornerRadius="12dp"
+                app:cardElevation="4dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="16dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="用户管理"
+                        android:textColor="@color/title_color"
+                        android:textSize="18sp"
+                        android:textStyle="bold"
+                        android:layout_marginBottom="12dp" />
+
+                    <TextView
+                        android:id="@+id/userCountText"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="总用户数：0"
+                        android:textColor="@color/gray_600"
+                        android:textSize="14sp"
+                        android:layout_marginBottom="8dp" />
+
+                    <com.google.android.material.button.MaterialButton
+                        android:id="@+id/viewUsersButton"
+                        android:layout_width="match_parent"
+                        android:layout_height="48dp"
+                        android:text="查看所有用户"
+                        android:textAllCaps="false"
+                        app:icon="@drawable/ic_person"
+                        app:iconGravity="textStart"
+                        app:iconPadding="8dp"
+                        app:iconTint="@color/white"
+                        style="@style/Widget.Material3.Button" />
+                </LinearLayout>
+            </com.google.android.material.card.MaterialCardView>
+        </LinearLayout>
+
+        <!-- 图书管理界面 -->
+        <LinearLayout
+            android:id="@+id/bookManagementLayout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:visibility="gone">
+
+            <!-- 图书管理卡片 -->
+            <com.google.android.material.card.MaterialCardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="16dp"
+                app:cardCornerRadius="12dp"
+                app:cardElevation="4dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="16dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="图书管理"
+                        android:textColor="@color/title_color"
+                        android:textSize="18sp"
+                        android:textStyle="bold"
+                        android:layout_marginBottom="12dp" />
+
+                    <TextView
+                        android:id="@+id/bookCountText"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="总图书数：0"
+                        android:textColor="@color/gray_600"
+                        android:textSize="14sp"
+                        android:layout_marginBottom="8dp" />
+
+                    <com.google.android.material.button.MaterialButton
+                        android:id="@+id/manageBooksButton"
+                        android:layout_width="match_parent"
+                        android:layout_height="48dp"
+                        android:text="管理图书"
+                        android:textAllCaps="false"
+                        app:icon="@drawable/ic_book"
+                        app:iconGravity="textStart"
+                        app:iconPadding="8dp"
+                        app:iconTint="@color/white"
+                        style="@style/Widget.Material3.Button" />
+                </LinearLayout>
+            </com.google.android.material.card.MaterialCardView>
+        </LinearLayout>
+
+        <!-- 类目管理界面 -->
+        <LinearLayout
+            android:id="@+id/categoryManagementLayout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:visibility="gone">
+
+            <!-- 类目管理卡片 -->
+            <com.google.android.material.card.MaterialCardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="16dp"
+                app:cardCornerRadius="12dp"
+                app:cardElevation="4dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="16dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="类目管理"
+                        android:textColor="@color/title_color"
+                        android:textSize="18sp"
+                        android:textStyle="bold"
+                        android:layout_marginBottom="12dp" />
+
+                    <TextView
+                        android:id="@+id/categoryCountText"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="总类目数：0"
+                        android:textColor="@color/gray_600"
+                        android:textSize="14sp"
+                        android:layout_marginBottom="8dp" />
+
+                    <com.google.android.material.button.MaterialButton
+                        android:id="@+id/manageCategoriesButton"
+                        android:layout_width="match_parent"
+                        android:layout_height="48dp"
+                        android:text="管理类目"
+                        android:textAllCaps="false"
+                        app:icon="@drawable/ic_category"
+                        app:iconGravity="textStart"
+                        app:iconPadding="8dp"
+                        app:iconTint="@color/white"
+                        style="@style/Widget.Material3.Button" />
+                </LinearLayout>
+            </com.google.android.material.card.MaterialCardView>
+        </LinearLayout>
+
+        <!-- 借阅管理界面 -->
+        <LinearLayout
+            android:id="@+id/borrowManagementLayout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:visibility="gone">
+
+            <!-- 借阅管理卡片 -->
+            <com.google.android.material.card.MaterialCardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="16dp"
+                app:cardCornerRadius="12dp"
+                app:cardElevation="4dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="16dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="借阅管理"
+                        android:textColor="@color/title_color"
+                        android:textSize="18sp"
+                        android:textStyle="bold"
+                        android:layout_marginBottom="12dp" />
+
+                    <TextView
+                        android:id="@+id/borrowRecordCountText"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="总借阅记录：0"
+                        android:textColor="@color/gray_600"
+                        android:textSize="14sp"
+                        android:layout_marginBottom="8dp" />
+
+                    <com.google.android.material.button.MaterialButton
+                        android:id="@+id/viewBorrowRecordsButton"
+                        android:layout_width="match_parent"
+                        android:layout_height="48dp"
+                        android:layout_marginBottom="8dp"
+                        android:text="查看借阅记录"
+                        android:textAllCaps="false"
+                        app:icon="@drawable/ic_book"
+                        app:iconGravity="textStart"
+                        app:iconPadding="8dp"
+                        app:iconTint="@color/white"
+                        style="@style/Widget.Material3.Button" />
+
+                    <com.google.android.material.button.MaterialButton
+                        android:id="@+id/manageBorrowConfigButton"
+                        android:layout_width="match_parent"
+                        android:layout_height="48dp"
+                        android:text="借阅规则配置"
+                        android:textAllCaps="false"
+                        app:icon="@drawable/ic_settings"
+                        app:iconGravity="textStart"
+                        app:iconPadding="8dp"
+                        app:iconTint="@color/white"
+                        style="@style/Widget.Material3.Button" />
+                </LinearLayout>
+            </com.google.android.material.card.MaterialCardView>
+        </LinearLayout>
+
+        <!-- 我的界面 -->
+        <LinearLayout
+            android:id="@+id/profileManagementLayout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:visibility="gone">
+
+            <!-- 个人信息卡片 -->
+            <com.google.android.material.card.MaterialCardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="16dp"
+                app:cardCornerRadius="12dp"
+                app:cardElevation="4dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="16dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="个人信息"
+                        android:textColor="@color/title_color"
+                        android:textSize="18sp"
+                        android:textStyle="bold"
+                        android:layout_marginBottom="12dp" />
+
+                    <TextView
+                        android:id="@+id/adminNameText"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="管理员：未知"
+                        android:textColor="@color/gray_600"
+                        android:textSize="14sp"
+                        android:layout_marginBottom="8dp" />
+
+                    <TextView
+                        android:id="@+id/adminEmailText"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="邮箱：未知"
+                        android:textColor="@color/gray_600"
+                        android:textSize="14sp"
+                        android:layout_marginBottom="16dp" />
+
+                    <com.google.android.material.button.MaterialButton
+                        android:id="@+id/editProfileButton"
+                        android:layout_width="match_parent"
+                        android:layout_height="48dp"
+                        android:text="编辑资料"
+                        android:textAllCaps="false"
+                        app:icon="@drawable/ic_person"
+                        app:iconGravity="textStart"
+                        app:iconPadding="8dp"
+                        app:iconTint="@color/white"
+                        style="@style/Widget.Material3.Button" />
+                </LinearLayout>
+            </com.google.android.material.card.MaterialCardView>
+            
+            <!-- 退出登录按钮 -->
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/logoutButton"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:layout_marginTop="16dp"
+                android:text="退出登录"
+                android:textAllCaps="false"
+                app:icon="@drawable/ic_arrow_back"
+                app:iconGravity="textStart"
+                app:iconPadding="8dp"
+                app:iconTint="@color/white"
+                style="@style/Widget.Material3.Button.OutlinedButton" />
+        </LinearLayout>
+    </FrameLayout>
+
+    <!-- 底部导航菜单 -->
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/bottomNavigationView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        app:menu="@menu/admin_bottom_navigation_menu"
+        app:labelVisibilityMode="labeled"
+        app:itemIconTint="@color/admin_nav_icon_color"
+        app:itemTextColor="@color/admin_nav_text_color" />
+
+</LinearLayout>

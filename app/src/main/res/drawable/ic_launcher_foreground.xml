@@ -1,0 +1,49 @@
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="108dp"
+    android:height="108dp"
+    android:viewportWidth="108"
+    android:viewportHeight="108">
+    <!-- 书籍轮廓 -->
+    <path
+        android:fillColor="#FFFFFF"
+        android:fillType="evenOdd"
+        android:pathData="M24,24L24,84L84,84L84,24L24,24Z" />
+    
+    <!-- 书脊 -->
+    <path
+        android:fillColor="#E8E8E8"
+        android:fillType="evenOdd"
+        android:pathData="M24,24L36,24L36,84L24,84L24,24Z" />
+    
+    <!-- 书页分隔线 -->
+    <path
+        android:fillColor="#CCCCCC"
+        android:fillType="evenOdd"
+        android:pathData="M36,32L84,32L84,34L36,34L36,32Z" />
+    <path
+        android:fillColor="#CCCCCC"
+        android:fillType="evenOdd"
+        android:pathData="M36,40L84,40L84,42L36,42L36,40Z" />
+    <path
+        android:fillColor="#CCCCCC"
+        android:fillType="evenOdd"
+        android:pathData="M36,48L84,48L84,50L36,50L36,48Z" />
+    <path
+        android:fillColor="#CCCCCC"
+        android:fillType="evenOdd"
+        android:pathData="M36,56L84,56L84,58L36,58L36,56Z" />
+    <path
+        android:fillColor="#CCCCCC"
+        android:fillType="evenOdd"
+        android:pathData="M36,64L84,64L84,66L36,66L36,64Z" />
+    <path
+        android:fillColor="#CCCCCC"
+        android:fillType="evenOdd"
+        android:pathData="M36,72L84,72L84,74L36,74L36,72Z" />
+    
+    <!-- 书本标题 -->
+    <path
+        android:fillColor="#4CAF50"
+        android:fillType="evenOdd"
+        android:pathData="M42,20L66,20L66,24L42,24L42,20Z" />
+</vector>

@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="8dp"
+    app:cardCornerRadius="8dp"
+    app:cardElevation="4dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="16dp">
+
+        <!-- 图书封面图片 -->
+        <ImageView
+            android:id="@+id/bookImage"
+            android:layout_width="80dp"
+            android:layout_height="100dp"
+            android:scaleType="centerCrop"
+            android:background="@drawable/rounded_input_box"
+            android:src="@drawable/ic_book_placeholder"
+            android:layout_marginEnd="16dp" />
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginBottom="8dp">
+
+                <TextView
+                    android:id="@+id/titleText"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="书名"
+                    android:textSize="18sp"
+                    android:textStyle="bold"
+                    android:textColor="@color/black" />
+
+                <TextView
+                    android:id="@+id/statusText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/status_available"
+                    android:paddingHorizontal="8dp"
+                    android:paddingVertical="4dp"
+                    android:text="未借出"
+                    android:textColor="@color/black"
+                    android:textSize="12sp"
+                    android:textStyle="bold" />
+
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/authorText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="作者"
+                android:textSize="14sp"
+                android:textColor="@color/gray"
+                android:layout_marginBottom="4dp" />
+
+            <TextView
+                android:id="@+id/isbnText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="ISBN: "
+                android:textSize="12sp"
+                android:textColor="@color/gray"
+                android:layout_marginBottom="4dp" />
+
+            <TextView
+                android:id="@+id/categoryText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="类别: "
+                android:textSize="12sp"
+                android:textColor="@color/gray"
+                android:layout_marginBottom="4dp" />
+
+            <TextView
+                android:id="@+id/locationText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="位置: "
+                android:textSize="12sp"
+                android:textColor="@color/gray"
+                android:layout_marginBottom="8dp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="end">
+
+                <ImageView
+                    android:id="@+id/editButton"
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:src="@drawable/ic_edit"
+                    android:layout_marginEnd="16dp"
+                    android:contentDescription="编辑" />
+
+                <ImageView
+                    android:id="@+id/deleteButton"
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:src="@drawable/ic_delete"
+                    android:contentDescription="删除" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</com.google.android.material.card.MaterialCardView>

@@ -1,0 +1,220 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <!-- 标题栏 -->
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:cardCornerRadius="0dp"
+            app:cardElevation="4dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:padding="16dp">
+
+                <ImageView
+                    android:id="@+id/backButton"
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:src="@drawable/ic_arrow_back"
+                    android:layout_marginEnd="16dp"
+                    android:contentDescription="返回"
+                    android:clickable="true"
+                    android:focusable="true" />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="图书详情"
+                    android:textSize="20sp"
+                    android:textStyle="bold"
+                    android:textColor="@color/black" />
+
+            </LinearLayout>
+
+        </com.google.android.material.card.MaterialCardView>
+
+        <!-- 图书图片 -->
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:cardCornerRadius="8dp"
+            app:cardElevation="2dp"
+            android:layout_margin="16dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="16dp">
+
+                <ImageView
+                    android:id="@+id/bookImageView"
+                    android:layout_width="200dp"
+                    android:layout_height="280dp"
+                    android:layout_gravity="center"
+                    android:scaleType="centerCrop"
+                    android:background="@color/gray_light"
+                    android:src="@drawable/ic_book_placeholder" />
+
+            </LinearLayout>
+
+        </com.google.android.material.card.MaterialCardView>
+
+        <!-- 图书基本信息 -->
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:cardCornerRadius="8dp"
+            app:cardElevation="2dp"
+            android:layout_margin="16dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="16dp">
+
+                <TextView
+                    android:id="@+id/titleText"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="书名"
+                    android:textSize="24sp"
+                    android:textStyle="bold"
+                    android:textColor="@color/black"
+                    android:layout_marginBottom="8dp" />
+
+                <TextView
+                    android:id="@+id/authorText"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="作者："
+                    android:textSize="16sp"
+                    android:textColor="@color/black"
+                    android:layout_marginBottom="4dp" />
+
+                <TextView
+                    android:id="@+id/isbnText"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="ISBN："
+                    android:textSize="16sp"
+                    android:textColor="@color/black"
+                    android:layout_marginBottom="4dp" />
+
+                <TextView
+                    android:id="@+id/publisherText"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="出版社："
+                    android:textSize="16sp"
+                    android:textColor="@color/black"
+                    android:layout_marginBottom="4dp" />
+
+                <TextView
+                    android:id="@+id/publishDateText"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="出版日期："
+                    android:textSize="16sp"
+                    android:textColor="@color/black"
+                    android:layout_marginBottom="4dp" />
+
+                <TextView
+                    android:id="@+id/categoryText"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="类别："
+                    android:textSize="16sp"
+                    android:textColor="@color/black"
+                    android:layout_marginBottom="4dp" />
+
+                <TextView
+                    android:id="@+id/locationText"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="位置："
+                    android:textSize="16sp"
+                    android:textColor="@color/black"
+                    android:layout_marginBottom="4dp" />
+
+                <TextView
+                    android:id="@+id/statusText"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="状态："
+                    android:textSize="16sp"
+                    android:textColor="@color/black"
+                    android:layout_marginBottom="16dp" />
+
+                <!-- 借阅按钮 -->
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/borrowButton"
+                    android:layout_width="match_parent"
+                    android:layout_height="48dp"
+                    android:text="借阅"
+                    android:textAllCaps="false"
+                    android:textSize="16sp"
+                    app:icon="@drawable/ic_book"
+                    app:iconGravity="textStart"
+                    app:iconPadding="8dp"
+                    app:iconSize="20dp"
+                    app:iconTint="@color/white"
+                    style="@style/Widget.Material3.Button" />
+
+            </LinearLayout>
+
+        </com.google.android.material.card.MaterialCardView>
+
+        <!-- 图书描述 -->
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:cardCornerRadius="8dp"
+            app:cardElevation="2dp"
+            android:layout_margin="16dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="16dp">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="图书描述"
+                    android:textSize="18sp"
+                    android:textStyle="bold"
+                    android:textColor="@color/black"
+                    android:layout_marginBottom="8dp" />
+
+                <TextView
+                    android:id="@+id/descriptionText"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="暂无描述"
+                    android:textSize="14sp"
+                    android:textColor="@color/black"
+                    android:lineSpacingExtra="4dp" />
+
+            </LinearLayout>
+
+        </com.google.android.material.card.MaterialCardView>
+
+    </LinearLayout>
+
+</ScrollView>

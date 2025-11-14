@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+    
+    <!-- 紫色系颜色 -->
+    <color name="purple_200">#FFBB86FC</color>
+    <color name="purple_500">#FF6200EE</color>
+    <color name="purple_700">#FF3700B3</color>
+
+    <!-- 新的主题颜色 - 蓝色系 -->
+    <color name="primary_blue">#FF667EEA</color>
+    <color name="primary_dark_blue">#FF764BA2</color>
+    <color name="accent_blue">#FF4FACFE</color>
+    <color name="light_blue">#FFA7C7FF</color>
+
+    <color name="title_color">#1f2937</color>
+    <color name="title_two_color">#6B7280</color>
+
+    <!-- 灰色系颜色 -->
+    <color name="gray_700">#FF616161</color>
+    <color name="gray_600">#FF757575</color>
+    <color name="gray_500">#FF9E9E9E</color>
+    <color name="gray_400">#FF9CA3AF</color>
+    <color name="gray_300">#FFD1D5DB</color>
+    <color name="gray_100">#FFF3F4F6</color>
+    <color name="gray_light">#FFE5E7EB</color>
+    
+    <!-- 其他常用颜色 -->
+    <color name="teal_200">#FF03DAC5</color>
+    <color name="teal_700">#FF018786</color>
+    <color name="error_color">#FFB00020</color>
+    <color name="error_red">#FFB00020</color>
+    <color name="primary">#FF667EEA</color>
+    
+    <!-- 新增颜色 -->
+    <color name="gray">#FF808080</color>
+    <color name="green">#FF4CAF50</color>
+    <color name="background">#FFF3F4F6</color>
+    
+    <!-- 信息提示颜色 -->
+    <color name="info_background">#E3F2FD</color>
+    <color name="info_text">#1976D2</color>
+</resources>

@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <application
+        android:allowBackup="true"
+        android:dataExtractionRules="@xml/data_extraction_rules"
+        android:fullBackupContent="@xml/backup_rules"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.SchoolBook"
+        tools:targetApi="31">
+        <activity
+            android:name="com.read.schoolbook.MainActivity"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".activity.RegisterActivity"
+            android:exported="false"
+            android:theme="@style/Theme.SchoolBook" />
+        <activity
+            android:name=".activity.AdminActivity"
+            android:exported="false"
+            android:theme="@style/Theme.SchoolBook" />
+        <activity
+            android:name=".activity.UserActivity"
+            android:exported="false"
+            android:theme="@style/Theme.SchoolBook" />
+        <activity
+            android:name=".activity.UserListActivity"
+            android:exported="false"
+            android:theme="@style/Theme.SchoolBook" />
+        <activity
+            android:name=".activity.BookListActivity"
+            android:exported="false"
+            android:theme="@style/Theme.SchoolBook" />
+        <activity
+            android:name=".activity.BookEditActivity"
+            android:exported="false"
+            android:theme="@style/Theme.SchoolBook" />
+        <activity
+            android:name=".activity.CategoryListActivity"
+            android:exported="false"
+            android:theme="@style/Theme.SchoolBook" />
+        <activity
+            android:name=".activity.CategoryEditActivity"
+            android:exported="false"
+            android:theme="@style/Theme.SchoolBook" />
+        <activity
+            android:name=".activity.BookDetailActivity"
+            android:exported="false"
+            android:theme="@style/Theme.SchoolBook" />
+        <activity
+            android:name=".activity.BorrowRecordListActivity"
+            android:exported="false"
+            android:theme="@style/Theme.SchoolBook" />
+        <activity
+            android:name=".activity.BorrowConfigActivity"
+            android:exported="false"
+            android:theme="@style/Theme.SchoolBook" />
+        <activity
+            android:name=".activity.BorrowRecordDetailActivity"
+            android:exported="false"
+            android:theme="@style/Theme.SchoolBook" />
+        <activity
+            android:name=".activity.CategorySearchActivity"
+            android:exported="false"
+            android:theme="@style/Theme.SchoolBook" />
+        <activity
+            android:name=".activity.EditProfileActivity"
+            android:exported="false"
+            android:theme="@style/Theme.SchoolBook" />
+        <activity
+            android:name=".activity.ChangePasswordActivity"
+            android:exported="false"
+            android:theme="@style/Theme.SchoolBook" />
+    </application>
+
+</manifest>
